@@ -2,7 +2,9 @@
   <img src="banner.jpg" alt="Sin &amp; Punishment VR: 60fps, HD textures, Point &amp; Shoot" width="100%">
 </p>
 
-<!-- GIF GOES HERE (under the banner): <p align="center"><img src="gameplay.gif" width="80%"></p> -->
+<p align="center">
+  <img src="gameplay.gif" alt="Sin &amp; Punishment VR gameplay" width="80%">
+</p>
 
 # Sin & Punishment VR
 
