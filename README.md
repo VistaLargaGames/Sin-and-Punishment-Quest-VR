@@ -50,6 +50,17 @@ You need a Quest 3 with [developer mode](https://developers.meta.com/horizon/doc
 4. Start **Sin and Punishment VR** from *Unknown Sources* in your library.
 5. In the ROM window choose **Choose ROM file** and pick your ROM. It is copied into the app once. After that the window shows **Play**, so you can start right away.
 
+## PC VR version (Windows)
+
+There is also a **PC version** that plays in a headset connected to your Windows PC: a Quest over Quest Link, Air Link, Virtual Desktop or Steam Link, a Valve Index, an HTC Vive, or a Windows Mixed Reality headset. It is the same game and the same point-and-shoot controls as the Quest app, running on your PC's graphics card.
+
+1. Download **Sin-and-Punishment-VR-PC-0.1.0.zip** from the [Releases](../../releases) page and unzip it anywhere.
+2. Start your headset's PC link first (for the Quest: the link or streaming app, with SteamVR running) and wait for its home.
+3. Run **SnPRecompiled.exe**. The launcher opens on your monitor: choose your ROM there, then start the game.
+4. Put the headset on. The game shows in the headset and the monitor window stays still.
+
+No headset found? The game just runs flat on your monitor. The PC version is new, so please report problems and attach the `snp_vr.log` file that appears next to the exe. Settings are in `snp_vr.cfg` next to it.
+
 ## HD textures
 
 Copy a Rice-format texture pack folder into:
@@ -77,7 +88,7 @@ First release.
 
 - Beta. If something looks wrong or crashes, please open an issue and say which stage you were in.
 - The in-game text is small on purpose (the HUD is pulled in so it fits your view); it is a bit soft because the original letters are tiny.
-- Quest 3 only. Other headsets are untested.
+- The Quest app is for the Quest 3 only. The PC version is new and has had little testing, especially with headsets other than the Quest.
 
 ## Credits
 
