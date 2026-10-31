@@ -33,18 +33,18 @@ Treasure's N64 rail shooter **Sin and Punishment** (*Tsumi to Batsu: Hoshi no Ke
 | Move | Left thumbstick |
 | Pick a lock-on target | Right thumbstick |
 | Select in menus | Right trigger on the menu, or **A** / **X** |
-| Start / pause | Left menu button |
+| Start / pause | Left menu button (PC VR through Steam Link / SteamVR: **click the left thumbstick**, SteamVR keeps the menu button for its own menu) |
 | Recenter the view | Click the right thumbstick |
 
 ## Install
 
 You need a Quest 3 with [developer mode](https://developers.meta.com/horizon/documentation/native/android/mobile-device-setup/) turned on.
 
-1. Download **Sin-and-Punishment-VR-0.1.0.apk** from the [Releases](../../releases) page.
+1. Download **Sin-and-Punishment-VR-0.1.1.apk** from the [Releases](../../releases) page.
 2. Install it on the headset with SideQuest, Meta Quest Developer Hub, or adb:
 
    ```bash
-   adb install -r Sin-and-Punishment-VR-0.1.0.apk
+   adb install -r Sin-and-Punishment-VR-0.1.1.apk
    ```
 3. Put your ROM (`.z64`, `.n64` or `.v64`) on the headset, for example in its Downloads folder.
 4. Start **Sin and Punishment VR** from *Unknown Sources* in your library.
@@ -54,7 +54,7 @@ You need a Quest 3 with [developer mode](https://developers.meta.com/horizon/doc
 
 There is also a **PC version** that plays in a headset connected to your Windows PC: a Quest over Quest Link, Air Link, Virtual Desktop or Steam Link, a Valve Index, an HTC Vive, or a Windows Mixed Reality headset. It is the same game and the same point-and-shoot controls as the Quest app, running on your PC's graphics card.
 
-1. Download **Sin-and-Punishment-VR-PC-0.1.0.zip** from the [Releases](../../releases) page and unzip it anywhere.
+1. Download **Sin-and-Punishment-VR-PC-0.1.1.zip** from the [Releases](../../releases) page and unzip it anywhere.
 2. Start your headset's PC link first (for the Quest: the link or streaming app, with SteamVR running) and wait for its home.
 3. Run **SnPRecompiled.exe**. The launcher opens on your monitor: choose your ROM there, then start the game.
 4. Put the headset on. The game shows in the headset and the monitor window stays still.
@@ -70,6 +70,17 @@ Android/data/com.sinandpunishment.recompiled/files/snprecomp/texture_packs/
 ```
 
 (with adb push, or any file manager that can reach that folder) and start the game. Packs made for N64 emulators' `hires_texture` folder work.
+
+## What's new in 0.1.1
+
+Fixes for problems players reported. Some of them are workarounds, not final cures: see the first item and Known issues.
+
+- **Black screens (workaround, permanent fix still in progress).** On stage 1-2, when the first mini boss appears and during the girl boss's last phase (the explosions and the bouncing attack), the 3D world could go black in the headset for a few seconds while only the HUD stayed. Quest and PC were both affected. The game now notices a black world and switches to the floating screen, which never goes black, for 2.5 seconds, then tries the headset view again. You may see a short black flash right before the switch, and during the girl boss's bouncing attack it can switch back and forth. I'm still working on a permanent fix.
+- **Floating screen placement.** The screen is placed in front of you every time the game switches to it from the headset view.
+- **PC: pause through Steam Link / SteamVR.** SteamVR keeps the left menu button for its own menu, so it opened SteamVR's menu instead of pausing. Clicking the **left thumbstick** now pauses the game (the right thumbstick still recenters).
+- **ROM file names.** Files ending in `.n64` work, like `.z64` and `.v64`.
+
+If a black screen still happens, please open an issue and say which stage and moment. On PC attach `snp_vr.log` (next to the exe): the lines starting with `world black` show what the game saw.
 
 ## What's new in 0.1.0
 
@@ -87,6 +98,7 @@ First release.
 ## Known issues
 
 - Beta. If something looks wrong or crashes, please open an issue and say which stage you were in.
+- The 3D world can still black out for a moment at the stage 1-2 mini boss and during the girl boss's last phase. In 0.1.1 the game covers it by switching to the floating screen for 2.5 seconds and then back (a short flash is normal). The real cause is not found yet; a permanent fix is being worked on.
 - The in-game text is small on purpose (the HUD is pulled in so it fits your view); it is a bit soft because the original letters are tiny.
 - The Quest app is for the Quest 3 only. The PC version is new and has had little testing, especially with headsets other than the Quest.
 
